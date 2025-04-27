@@ -18,3 +18,4 @@ Code linters: [eslint](https://eslint.org/) with pluggable [Prettier](https://gi
 - fix JS errors: `lint:fix`
   Eslint configuration file: [here](.eslintrc.json)
 
+  

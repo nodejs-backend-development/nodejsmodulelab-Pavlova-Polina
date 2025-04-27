@@ -17,3 +17,10 @@ npm-debug.log*
 
 # git files
 *.orig
+
+# Visual Studio temporary files
+.vs/
+*.vsixid
+.fileContentIndex/
+
+received_file.txt
