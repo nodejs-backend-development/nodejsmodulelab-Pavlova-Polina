@@ -3,7 +3,6 @@ const fs = require('fs');
 const zlib = require('zlib');
 const path = require('path');
 
-// Ïåðåâ³ðÿºìî, ÷è ³ñíóº input_file.txt, ÿêùî í³ — ñòâîðþºìî éîãî
 const filePath = path.join(__dirname, 'input_file.txt');
 
 if (!fs.existsSync(filePath)) {
@@ -23,16 +22,16 @@ const options = {
 
 const req = http.request(options, (res) => {
     let data = '';
-    res.on('data', (chunk) => {
-        data += chunk;
+    res.on('data', () => {
+        data += '';
     });
     res.on('end', () => {
         console.log('Response from server:', data);
     });
 });
 
-req.on('error', (err) => {
-    console.error('Error sending request:', err.message);
+req.on('error', () => {
+    console.error('Error sending request');
 });
 
 const readStream = fs.createReadStream(filePath);

@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
         });
 
         // Обробка помилок розтискання
-        unzip.on('error', (err) => {
+        unzip.on('error', ('err') => {
             res.writeHead(500, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ error: 'Error unzipping file' }));
         });
